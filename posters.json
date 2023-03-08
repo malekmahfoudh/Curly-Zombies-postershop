@@ -1,0 +1,80 @@
+
+  [
+    {
+        "url": "assets/austronaut.png",
+        "title": "Austronaut",
+        "description": "Marfa artisan pok pok, coloring book shaman intelligentsia meh kinfolk affogato raw denim direct trade subway tile kombucha.",
+        "price": 100,
+        "campaign" : false
+    },
+    {
+        "url": "assets/ninja.png",
+        "title": "Ninja",
+        "description": "Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercat squid skateboard readymade.",
+        "price": 100,
+        "campaign" : false
+    },
+    {
+        "url": "assets/nerd.png",
+        "title": "Nerd",
+        "description": "Tacos squid retro, activated charcoal next level kitsch vexillologist ennui. Vice offal iceland humblebrag, single-origin coffee cliche vegan adaptogen jean shorts yr.",
+        "price": 100,
+        "campaign" : false
+    },
+    {
+        "url": "assets/doctor.png",
+        "title": "Läkare",
+        "description": "Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercats squid skateboard readymade.",
+        "price": 100,
+        "campaign" : false
+    },
+    {
+        "url": "assets/guitarist.png",
+        "title": "Gitarrknäppare",
+        "description": "Tacos squid retro, activated charcoal next level kitsch vexillologist ennui. Vice offal iceland humblebrag, single-origin coffee cliche vegan adaptogen jean shorts yr.",
+        "price": 100,
+        "campaign" : false
+    },
+    {
+        "url": "assets/diver.png",
+        "title": "Snorklare",
+        "description": "Man braid hammock listicle retro crucifix, tumeric poutine kale chips letterpress woke. Activated charcoal jianbing coloring book direct trade tote.",
+        "price": 100,
+        "campaign": false
+    },
+    {
+        "url": "assets/clown.png",
+        "title": "Clown",
+        "description": "Marfa artisan pok pok, coloring book shaman intelligentsia meh kinfolk affogato raw denim direct trade subway tile kombucha.",
+        "price": 100,
+        "campaign" : false
+    },
+    {
+        "url": "assets/police.png",
+        "title": "Polis",
+        "description": "Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercats squid skateboard readymade.",
+        "price": 100,
+        "campaign" : false
+    },
+    {
+        "url": "assets/fairy.png",
+        "title": "Fe",
+        "description": "Tacos squid retro, activated charcoal next level kitsch vexillologist ennui. Vice offal iceland humblebrag, single-origin coffee cliche vegan adaptogen jean shorts yr.",
+        "price": 100,
+        "campaign" : false
+    },
+    {
+        "url": "assets/photographer.png",
+        "title": "Fotograf",
+        "description": "Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercats squid skateboard readymade.",
+        "price": 100,
+        "campaign" : true
+    },
+    {
+        "url": "assets/pt.png",
+        "title": "Personlig tränare",
+        "description": "Tacos squid retro, activated charcoal next level kitsch vexillologist ennui. Vice offal iceland humblebrag, single-origin coffee cliche vegan adaptogen jean shorts yr.",
+        "price": 100,
+        "campaign" : true
+    }
+]  
