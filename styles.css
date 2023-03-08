@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --header-color: #3DE07E;
+    --main-color: black;
+    --btn-color: #E83F57;
+    --footer-color: #333333;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    background-color: var(--main-color);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    margin: 0 auto;
+    width: 100vw;
+    background-color: var(--header-color);
+    background-image: url(/assets/ninja_head.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: bottom;
+    display: flex;
+    background-size: 15%;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0 auto;
+    margin-bottom: 20rem;
+    margin-top: 8rem;
+    font-size: 80px;
+}
+
+main {
+    background-color: var(--main-color);
+}
+
+.small-posters__container {
+    width: 100vw;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.small-posters__container article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+
+.big-posters__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.big-posters__container article {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 4rem 0;
+}
+
+button {
+    all: unset;
+    background-color: var(--btn-color);
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    max-width: fit-content;
+}
+
+footer {
+    margin: 0 auto;
+    width: 100vw;
+    background-color: var(--footer-color);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+ul {
+    list-style: none;
+}
