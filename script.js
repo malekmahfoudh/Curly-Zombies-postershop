@@ -8,6 +8,7 @@ for (let i = 0; i < items.length; i++) {
         cartList.push(items[i]);
     }
 }
+
 console.log(cartList);
 
 async function fetchProducts() {
@@ -56,6 +57,12 @@ async function renderProducts() {
     allButtons.forEach(button => {
         button.addEventListener('click', () => {
             let chosenProductID = button.parentNode.parentNode.id;
+
+            
+            let targetProduct = productList.find(product => product.id == button.parentNode.parentNode.id);
+            console.log(targetProduct);
+            targetProduct.quantity += 1;
+
             addToCart(chosenProductID);
             console.log(cartList);
         })
