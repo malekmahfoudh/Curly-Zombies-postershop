@@ -25,9 +25,11 @@ async function renderProducts() {
         let articleCard = document.createElement("article");
             articleCard.innerHTML = `
                 <img src="${imgUrl}" alt="Bild på ${title} produkt">
+                <section class="prod-info">
                 <h3>${title}</h3>
                 <p>${desc}</p>
                 <button>Oh, take my money</button>
+                </section>
             `
         // Kollar om det är kampanj
         if (product.campaign === true) {
