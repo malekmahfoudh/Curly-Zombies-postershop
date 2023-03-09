@@ -1,4 +1,6 @@
 
+let cartList = [];
+
 async function fetchProducts() {
     const response = await fetch("posters.json");
     let data = await response.json();
@@ -23,14 +25,16 @@ async function renderProducts() {
 
         // Skapar kortet
         let articleCard = document.createElement("article");
-            articleCard.innerHTML = `
-                <img src="${imgUrl}" alt="Bild på ${title} produkt">
-                <section class="prod-info">
-                <h3>${title}</h3>
-                <p>${desc}</p>
-                <button>Oh, take my money</button>
-                </section>
-            `
+        articleCard.id = product.id;
+        articleCard.innerHTML = `
+            <img src="${imgUrl}" alt="Bild på ${title} produkt">
+            <section class="prod-info">
+            <h3>${title}</h3>
+            <p>${desc}</p>
+            <button>Oh, take my money</button>
+            </section>
+        `
+        
         // Kollar om det är kampanj
         if (product.campaign === true) {
             bigContainer.appendChild(articleCard)
@@ -38,7 +42,25 @@ async function renderProducts() {
             smallContainer.appendChild(articleCard);
         }
     })
+
+    let allButtons = document.querySelectorAll('button');
+    allButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            let chosenProductID = button.parentNode.parentNode.id;
+            addToCart(chosenProductID);
+            console.log(cartList);
+        })
+    })
+
 }
 
+
+
 renderProducts();
+
+
+
+function addToCart(item) {
+    cartList.push(item);
+}
 
