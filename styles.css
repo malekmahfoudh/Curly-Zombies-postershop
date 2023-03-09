@@ -150,3 +150,17 @@ footer h4 {
     justify-content: space-evenly;
 }
 
+
+/* CHECK OUT */
+
+.checkout-container {
+    width: 80vw;
+    color: white;
+}
+
+.break-line {
+    background-color: white;
+    width: 100%;
+    height: 1px;
+    margin: 1rem 0;
+}
