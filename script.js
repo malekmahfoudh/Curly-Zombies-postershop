@@ -1,6 +1,15 @@
 
 let cartList = [];
 
+let items = localStorage.getItem('cart');
+
+for (let i = 0; i < items.length; i++) {
+    if (items[i] !== ",") {
+        cartList.push(items[i]);
+    }
+}
+console.log(cartList);
+
 async function fetchProducts() {
     const response = await fetch("posters.json");
     let data = await response.json();
@@ -54,13 +63,14 @@ async function renderProducts() {
 
 }
 
-
-
 renderProducts();
-
-
 
 function addToCart(item) {
     cartList.push(item);
 }
+
+let cartBtn = document.querySelector('#checkout-cart');
+cartBtn.addEventListener('click', () => {
+    localStorage.setItem('cart', cartList)
+})
 
