@@ -7,7 +7,6 @@ for (let i = 0; i < items.length; i++) {
 }
 console.log(cartList);
 
-
 let backBtn = document.querySelector('#backBtn');
 backBtn.addEventListener('click', () => {
     localStorage.setItem('cart', cartList)
@@ -19,7 +18,6 @@ async function fetchProducts() {
 
     return data;
 }
-
 
 async function addProductsToUI() {
     let container = document.querySelector('.checkout-container__products')
@@ -68,7 +66,6 @@ async function addProductsToUI() {
     })
 }
 
-
 async function addProductsInfoToUI() {
     let infoContainer = document.querySelector('.berat-test');
     infoContainer.innerHTML = "";
@@ -102,7 +99,6 @@ async function addProductsInfoToUI() {
 
 async function updateProductCount() {
     let data = await fetchProducts()
-    // Product info
     
     data.forEach(product => {
         let count = 0;
@@ -122,13 +118,9 @@ async function updateProductCount() {
             <p class="product-amount">${count}</p>
             <p class="product-price">${product.price * count}</p>
             ` 
-            
         }
     })
 }
-
-
-
 
 addProductsToUI()
 addProductsInfoToUI()

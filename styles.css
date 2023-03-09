@@ -9,6 +9,7 @@
     --header-color: #3DE07E;
     --main-color: black;
     --btn-color: #E83F57;
+    --btn-color-hover: #8f2636;
     --footer-color: #333333;
 }
 
@@ -135,6 +136,16 @@ button {
     font-weight: bold;
     max-width: fit-content;
 }
+
+button:hover {
+    background-color: var(--btn-color-hover);
+    scale: 1.05;
+    cursor: pointer;
+    transform-origin: left;
+    transition: all .2s ease-in-out;
+    
+}  
+
 
 footer {
     margin: 0 auto;
