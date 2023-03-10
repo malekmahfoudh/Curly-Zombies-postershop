@@ -143,8 +143,12 @@ button:hover {
     cursor: pointer;
     transform-origin: left;
     transition: all .2s ease-in-out;
-    
 }  
+
+button:active {
+    scale: 1;
+    transition: all 0s ;
+}
 
 
 footer {
@@ -215,18 +219,37 @@ footer h4 {
     justify-content: space-between;
 }
 
-.checkout-info__product-info {
+.checkout-info__data {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.checkout-info__product-info {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    
+    /* justify-content: space-between; */
 }
 
 .checkout-info__product-info p {
     font-size: 24px;
 }
 
+.checkout-info__product-info p:nth-child(2) {
+    justify-self: center;
+} 
+
+.checkout-info__product-info p:nth-child(3) {
+    justify-self: end;
+} 
+
+
 .checkout-info__total {
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
 }
 
 .checkout-btn {

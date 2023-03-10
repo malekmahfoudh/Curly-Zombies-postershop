@@ -67,7 +67,7 @@ async function addProductsToUI() {
 }
 
 async function addProductsInfoToUI() {
-    let infoContainer = document.querySelector('.berat-test');
+    let infoContainer = document.querySelector('.checkout-info__data');
     infoContainer.innerHTML = "";
     let data = await fetchProducts()
     // Product info
@@ -77,7 +77,7 @@ async function addProductsInfoToUI() {
         for (let i = 0; i < cartList.length; i++) {
             
             if (product.id == cartList[i]) {
-                let infoContainer = document.querySelector('.berat-test');
+                let infoContainer = document.querySelector('.checkout-info__data');
                 // infoContainer.innerHTML = "";
                 let info = document.createElement('article');
                 info.classList.add('checkout-info__product-info');
@@ -87,7 +87,7 @@ async function addProductsInfoToUI() {
                 info.innerHTML = `
                 <p class="product-name">${product.title}</p>
                 <p class="product-amount">${product.quantity}</p>
-                <p class="product-price">${product.price}</p>
+                <p class="product-price">${product.price} SEK</p>
                 ` 
                 infoContainer.appendChild(info);
                 break;
@@ -116,12 +116,26 @@ async function updateProductCount() {
             target.innerHTML = `
             <p class="product-name">${product.title}</p>
             <p class="product-amount">${count}</p>
-            <p class="product-price">${product.price * count}</p>
+            <p class="product-price">${product.price * count} SEK</p>
             ` 
         }
     })
+    calcSum();
 }
 
 addProductsToUI()
 addProductsInfoToUI()
 updateProductCount()
+
+function calcSum() {
+    let totalSum = 0;
+
+    let allPrices = document.querySelectorAll('.product-price')
+    allPrices.forEach(item => {
+        totalSum += parseInt(item.innerHTML) ;
+    })
+
+    let target = document.getElementById('sum');
+    target.innerHTML = `${totalSum} SEK`;
+}
+
