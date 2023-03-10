@@ -1,11 +1,9 @@
 let cartList = [];
 let items = localStorage.getItem('cart');
-for (let i = 0; i < items.length; i++) {
-    if (items[i] !== ",") {
-        cartList.push(items[i]);
-    }
-}
-console.log(cartList);
+console.log(items, 'detta får vi fram');
+
+cartList = items.split(',')
+console.log(cartList, 'här är listan');
 
 let backBtn = document.querySelector('#backBtn');
 backBtn.addEventListener('click', () => {

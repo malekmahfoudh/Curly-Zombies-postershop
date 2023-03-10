@@ -2,12 +2,7 @@
 let cartList = [];
 
 let items = localStorage.getItem('cart');
-
-for (let i = 0; i < items.length; i++) {
-    if (items[i] !== ",") {
-        cartList.push(items[i]);
-    }
-}
+cartList = items.split(',');
 
 console.log(cartList);
 
